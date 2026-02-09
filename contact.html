@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Reservations - Jarkata Meal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Jarkata Meal</h1>
+                <p class="tagline">Authentic English Cuisine</p>
+            </div>
+            
+            <!-- Main navigation menu -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero page -->
+    <section class="page-hero">
+        <div class="container">
+            <h2>Contact Us & Make a Reservation</h2>
+        </div>
+    </section>
+
+   
+    <section class="contact-intro">
+        <div class="container">
+            <p class="intro-text">We'd love to hear from you! Whether you're making a reservation, planning a private event, or have a question about our menu, we're here to help.</p>
+        </div>
+    </section>
+
+    <!-- Contact content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-flex">
+                <!-- Reservation form -->
+                <div class="contact-form-wrapper">
+                    <h3>Make a Reservation</h3>
+                    <form id="reservationForm">
+                        <!-- Name field -->
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Smith">
+                        </div>
+
+                        <!-- Email field -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <!-- Phone field -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                        </div>
+
+                        <!-- Date field -->
+                        <div class="form-group">
+                            <label for="date">Reservation Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <!-- Time field -->
+                        <div class="form-group">
+                            <label for="time">Preferred Time *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select a time</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="11:30">11:30 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="12:30">12:30 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="13:30">1:30 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="17:30">5:30 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="19:30">7:30 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                            </select>
+                        </div>
+
+                        <!-- Number of guests -->
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Select number of guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="7">7 Guests</option>
+                                <option value="8">8 Guests</option>
+                                <option value="more">More than 8</option>
+                            </select>
+                        </div>
+
+                        <!-- Occasion field -->
+                        <div class="form-group">
+                            <label for="occasion">Special Occasion</label>
+                            <select id="occasion" name="occasion">
+                                <option value="">None</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="business">Business Dinner</option>
+                                <option value="other">Other Celebration</option>
+                            </select>
+                        </div>
+
+                        <!-- Special requests -->
+                        <div class="form-group">
+                            <label for="message">Special Requests or Dietary Restrictions</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Please let us know about any allergies or special requirements..."></textarea>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn">Request Reservation</button>
+
+                        <!-- Success/Error messages will be displayed here -->
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+                
+
+                <!-- Contact information -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="info-item">
+                        <h4>📍 Address</h4>
+                        <p>123 Main Street<br>London, United Kingdom<br>United States</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>📞 Phone</h4>
+                        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <p class="info-note">Call us for same-day reservations</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>✉️ Email</h4>
+                        <p><a href="mailto:info@bellaitalia.com">info@bellaitalia.com</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>🕒 Opening Hours</h4>
+                        <p>
+                            Monday - Thursday: 11:00 AM - 10:00 PM<br>
+                            Friday - Saturday: 11:00 AM - 11:00 PM<br>
+                            Sunday: 12:00 PM - 9:00 PM
+                        </p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>🌐 Social Media</h4>
+                        <div class="social-icons">
+                            <a href="#">Facebook</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">Yelp</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item reservation-note">
+                        <h4>Reservation Policy</h4>
+                        <p>Reservations are recommended, especially for weekends and special occasions. Walk-ins are welcome based on availability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Parking and transportation info -->
+    <section class="parking-info">
+        <div class="container">
+            <h3>Parking & Transportation</h3>
+            <div class="transport-grid">
+                <div class="transport-item">
+                    <h4>🚗 Parking</h4>
+                    <p>Street parking available on Main Street and surrounding blocks. Public parking garage located two blocks away at 5th & Market.</p>
+                </div>
+
+                <div class="transport-item">
+                    <h4>🚇 Public Transit</h4>
+                    <p>BART: Montgomery Station (3 blocks)<br>
+                    MUNI: Lines 5, 14, 21 (1 block)<br>
+                    Bus: Multiple routes nearby</p>
+                </div>
+
+                <div class="transport-item">
+                    <h4>🚕 Ride Share</h4>
+                    <p>Convenient drop-off point directly in front of the restaurant. Uber and Lyft pickup zone on Main Street.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h3>Frequently Asked Questions</h3>
+            
+            <div class="faq-item">
+                <h4>Do I need a reservation?</h4>
+                <p>While walk-ins are welcome, we highly recommend making a reservation, especially for dinner and weekends, to ensure we have a table available for you.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What is your cancellation policy?</h4>
+                <p>We kindly ask that you cancel or modify your reservation at least 2 hours in advance. You can call us or reply to your confirmation email.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do you accommodate dietary restrictions?</h4>
+                <p>Yes! We can accommodate vegetarian, vegan, and gluten-free diets. Please inform us of any allergies or restrictions when making your reservation.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Is there a dress code?</h4>
+                <p>We have a smart casual dress code. While we don't require formal attire, we ask that guests avoid beachwear, athletic wear, and overly casual clothing.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do you offer private dining?</h4>
+                <p>Yes! We have several private dining spaces available for events. Visit our <a href="events.html">Events page</a> for more information.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I bring my own wine?</h4>
+                <p>We have an extensive wine list, but we do allow BYOB with a £25 corkage fee per bottle. Limit of 2 bottles per table.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Jarkata Meal</h4>
+                    <p>Bringing authentic English flavors to your neighborhood since 2010</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Reservations</a></li>
+                        <li><a href="events.html">Private Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>123 Main Street<br>London, United Kingdom<br>(555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jarkata Meal. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
